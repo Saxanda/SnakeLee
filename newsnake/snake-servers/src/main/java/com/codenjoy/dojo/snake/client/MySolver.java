@@ -34,7 +34,7 @@ public class MySolver implements Solver<Board> {
         Set<Point> reachableCellsTail = traceToTail.orElse(Collections.emptyList()).stream().collect(Collectors.toSet());
 
         if (emptyCellsWithAppleAndStone.isEmpty()) {
-            System.out.println("To make decision: Down");
+            System.out.println("To make decision: CHASE TAIL");
             // No empty cells available, chase a tail
             return snakeDirection(traceToTail);
         }
@@ -89,7 +89,7 @@ public class MySolver implements Solver<Board> {
                 return snakeDirection(traceToTail);
             }
 
-            // Add more conditions based on your game logic
+            // Add more conditions 
         }
 
         System.out.println("To make decision: Move to an area with more empty cells");
